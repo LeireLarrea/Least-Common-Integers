@@ -1,0 +1,13 @@
+def least_common_in_sorted(integers):
+    least_occurred_num = integers[0]
+    least_occurrences = integers.count(integers[0])
+    integerList = [least_occurred_num]
+    
+    for each in range(len(integers)):
+        if integers[each] not in integerList:
+            integerList.append(integers[each])
+            if least_occurrences >= integers.count(integers[each]):
+                least_occurred_num = integers[each]
+                least_occurrences = integers.count(integers[each])
+            
+    return least_occurred_num
