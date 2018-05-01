@@ -1,0 +1,10 @@
+def least_common_in_unsorted(integers):
+    least_occurred_num = integers[0]
+    least_occurrences = integers.count(integers[0])
+    
+    for each in range(len(integers)):
+        if least_occurrences >= integers.count(integers[each]):
+            least_occurred_num = integers[each]
+            least_occurrences = integers.count(integers[each])
+            
+    return least_occurred_num
